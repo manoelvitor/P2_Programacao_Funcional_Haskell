@@ -17,11 +17,11 @@ migration = "CREATE TABLE IF NOT EXISTS cliente\
   \ (id SERIAL PRIMARY KEY, nome TEXT NOT NULL)"
 
 getConn :: ConnectInfo
-getConn = ConnectInfo "ec2-54-221-74-111.compute-1.amazonaws.com" 
-                      5432 
-                      "pyphdvnfdgutex" 
-                      "a26a934a5ea4b1fc718f2295b54f71bc1b9c29711b3ffde2ba91ced6b7fb6b12" 
-                      "d444a6mtmia9ll"
+getConn = ConnectInfo "" --HOST
+                      5432 --PORT
+                      "" --USER
+                      "" --PASSWORD
+                      ""--DATABASE
 
 backend :: Backend BackendRoute FrontendRoute
 backend = Backend
