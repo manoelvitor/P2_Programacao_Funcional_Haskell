@@ -28,3 +28,11 @@ executable backend
                , common
                , frontend
                , obelisk-backend
+
+
+web: run-server
+
+runServer :: IO ()
+runServer = do
+  port <- read <$> getEnv “PORT”
+  Run port (serve myAPI myServer)
